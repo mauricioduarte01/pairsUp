@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Main.qml</file>
+        <file>Card.qml</file>
+        <file>secondary.qml</file>
+        <file>utils.js</file>
+        <file>jslogic.qml</file>
+        <file>../assets/card_2.svg</file>
+        <file>../assets/card_3.svg</file>
+        <file>../assets/card_4.svg</file>
+        <file>../assets/card_1.svg</file>
+        <file>../assets/card_5.svg</file>
+        <file>../assets/card_6.svg</file>
+        <file>../assets/cat.ogg</file>
+        <file>logic.cpp</file>
+    </qresource>
+</RCC>

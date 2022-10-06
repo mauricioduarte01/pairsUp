@@ -1,0 +1,15 @@
+{
+    "name": "memorytest.mduart",
+    "description": "A simple memory card game.",
+    "architecture": "@CLICK_ARCH@",
+    "title": "MemoryTest",
+    "hooks": {
+        "memorytest": {
+            "apparmor": "memorytest.apparmor",
+            "desktop":  "memorytest.desktop"
+        }
+    },
+    "version": "1.0.0",
+    "maintainer": "Mauricio Duarte <mauricioduarte@pm.me>",
+    "framework" : "@CLICK_FRAMEWORK@"
+}

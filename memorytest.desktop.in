@@ -1,0 +1,7 @@
+[Desktop Entry]
+_Name=MemoryTest
+Exec=memorytest %U
+Icon=assets/logo.svg
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
