@@ -31,13 +31,6 @@ Shape {
     property alias soundFx: soundFx.source
 
     signal finished ()
-//        function flip () {
-//            rotation.angle = 180
-//        }
-
-    function reset () {
-        rotation.angle = 0
-    }
 
     /* not fully implemented */
     MediaPlayer {
@@ -107,9 +100,8 @@ Shape {
             State {
                 name: "remove"
                 PropertyChanges {
-                    target: rotation
-                    angle: 0
-                    //frontCard.color: "red"
+                    target: card;
+                    visible: false;
                 }
             }
         ]

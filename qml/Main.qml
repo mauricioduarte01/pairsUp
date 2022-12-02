@@ -35,6 +35,9 @@ MainView {
     height: units.gu(75)
 
     property int lastIndex : -1
+    property int card1: -1
+    property int card2: -1
+    property int remaining: Math.round(repeater.model / 2)
 
     ListModel {
         id: listModel
@@ -94,10 +97,6 @@ MainView {
                 delegate: Card {
                     height: wrapper.card_size
                     width: wrapper.card_size
-//                    color: {
-//                        imageIndexes.index[1] = "red"
-//                        imageIndexes.index[2] = "green"
-//                    }
                     imageSource: "../assets/card_" + wrapper.imageIndexes[index] + ".svg" 
                     onFinished: verify(index)
                 }
@@ -105,45 +104,62 @@ MainView {
         }
     }
 
-    /* not yet implemented */
-    function reset () {
-        rotation.angle = 0
-    }
 
-    function verify(index) {
-        if(lastIndex == -1) {
-            lastIndex = index
+//    function verify(index) {
+//        if(card1 < 0) {         //card1 = -1
+//            card1 = index           // index  == 0 ?? -> card1 == 0
+//            return
+//        }
+      function verify(index) {
+        var currentItem = repeater.itemAt(index);
+        var lastItem = repeater.itemAt(card1)
+        while(card1 < 0) {
+            card1 = index
             return
         }
-        wrapper.enabled = false
-        var lastItem = repeater.itemAt(lastIndex)
-        var currentItem = repeater.itemAt(index)
+
+
+        //var currentItem = repeater.itemAt(index)
+        //var lastItem = repeater.itemAt(card1)
+        console.log(index) // card1 e index tienen siempre el mismo valor
+        console.log(card1)
 
         /* if current card is the same as the last card, remove cards from grid */
         /* if currend card is the same as the last card, face up and count as a match */
         if(currentItem.imageSource === lastItem.imageSource) {
 //            lastItem.state = "remove"
 //            currentItem.state = "remove"
+            --remaining;
             console.log("Cards matched! (not removed, play with the statements above)")
-            end_game_timer.start ()
-        }
+
+            if (remaining === 0) {
+                 console.log('Game Over!')
+                 end_game_timer.start ();
+               }
+           }
 
         /* if there is no match, turn down again */
         else if (currentItem.imageSource !== lastItem.imageSource){
-            currentItem.flipped = false
+            currentItem.flipped = false     // volver a girar las cartas
             lastItem.flipped = false
+            //delayTimer.start();
             console.log("No match!")
-        }
+           }
 
-//        if(repeater.model === 0) {
-//            console.log("Winning")
-//            end_game_timer.start ()
-//        }
-
-        lastIndex = -1
-        wrapper.enabled = true
-
+        return card1 = -1
     }
+
+
+//    Timer {
+//        id: delaytimer
+//        interval: 1000
+//        onTriggered: verify(index)
+//    }
+
+      function reset () {
+          rotation.angle = 0;
+      }
+
     /* use Timer in order to flip all the cards and reset the grid */
     /* not yet implemented */
     Timer {
@@ -152,6 +168,7 @@ MainView {
         signal done ()
         onTriggered: {
             repeater.itemAt[0] = reset ()
+            //console.log(itemAt[0])
             flip_timer0.start ()
         }
     }

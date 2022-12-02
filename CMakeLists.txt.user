@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.12.4, 2022-10-06T13:02:46. -->
+<!-- Written by QtCreator 4.12.4, 2022-12-02T10:57:55. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -253,7 +253,7 @@
      <value type="QString">PATH=/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app/install/lib/x86_64-linux-gnu/bin:/home/bladerunner/qmlpractice/github/memorytest:/usr/local/nvidia/bin:/bin:/usr/bin:/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app/install/lib/x86_64-linux-gnu/bin</value>
      <value type="QString">QT_QPA_PLATFORMTHEME=ubuntuappmenu</value>
     </valuelist>
-    <value type="QString" key="ProjectExplorer.CustomExecutableRunConfiguration.Executable">memorytest</value>
+    <value type="QString" key="ProjectExplorer.CustomExecutableRunConfiguration.Executable">/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app/memorytest</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Run memorytest</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.CustomExecutableRunConfiguration</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey"></value>
@@ -346,7 +346,7 @@
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory">/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app/install</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default"></value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">2</value>
   </valuemap>
