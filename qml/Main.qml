@@ -36,19 +36,20 @@ MainView {
 
     property int lastIndex : -1
     property int card1: -1
-    property int card2: -1
     property int remaining: Math.round(repeater.model / 2)
 
-    ListModel {
-        id: listModel
+    Component.onCompleted: wrapper
 
-        Component.onCompleted: {
-            fillData()
-        }
+//    ListModel {
+//        id: listModel
 
-        function fillData() {
-            var assetPath = "../assets/"
-            append ({})
+//        Component.onCompleted: {
+//            fillData()
+//        }
+
+//        function fillData() {
+//            var assetPath = "../assets/"
+//            append ({})
 //            append({"imageSource": assetPath + "card_" + wrapper.imageIndexes[index] + ".svg"})
 //            append({"imageSource": assetPath + "card_" + wrapper.imageIndexes[index] + ".svg"})
 //            append({"imageSource": assetPath + "card_" + wrapper.imageIndexes[index] + ".svg"})
@@ -58,8 +59,8 @@ MainView {
 //            append({"imageSource": assetPath + "dog.svg", color: "blue"})
 //            append({"imageSource": assetPath + "sheep.svg", color: "green"})
 //            append({"imageSource": assetPath + "sheep.svg", color: "green"})
-        }
-    }
+//        }
+//    }
 
     Page {
         header: PageHeader { visible: false }
@@ -98,67 +99,64 @@ MainView {
                     height: wrapper.card_size
                     width: wrapper.card_size
                     imageSource: "../assets/card_" + wrapper.imageIndexes[index] + ".svg" 
-                    onFinished: verify(index)
+                    onFinished: wrapper.verify(index)
                 }
             }
         }
+              function verify(index) {
+                var currentItem = repeater.itemAt(index);
+                var lastItem = repeater.itemAt(card1)
+                while(card1 < 0) {
+                    card1 = index
+                    return
+                }
+
+
+                //var currentItem = repeater.itemAt(index)
+                //var lastItem = repeater.itemAt(card1)
+                console.log(index) // card1 e index tienen siempre el mismo valor
+                console.log(card1)
+
+                /* if current card is the same as the last card, remove cards from grid */
+                /* if currend card is the same as the last card, face up and count as a match */
+                if(currentItem.imageSource === lastItem.imageSource) {
+        //            lastItem.state = "remove"
+        //            currentItem.state = "remove"
+                    --remaining;
+                    console.log("Cards matched! (not removed, play with the statements above)")
+
+                    if (remaining === 0) {
+                         console.log('Game Over!')
+                         end_game_timer.start ();
+
+                    }
+                   }
+
+                /* if there is no match, turn down again */
+                else if (currentItem.imageSource !== lastItem.imageSource){
+                    currentItem.flipped = false     // volver a girar las cartas
+                    lastItem.flipped = false
+                    //delayTimer.start();
+                    console.log("No match!")
+                   }
+
+                return card1 = -1
+            }
+
+
     }
-
-
-//    function verify(index) {
-//        if(card1 < 0) {         //card1 = -1
-//            card1 = index           // index  == 0 ?? -> card1 == 0
-//            return
-//        }
-      function verify(index) {
-        var currentItem = repeater.itemAt(index);
-        var lastItem = repeater.itemAt(card1)
-        while(card1 < 0) {
-            card1 = index
-            return
-        }
-
-
-        //var currentItem = repeater.itemAt(index)
-        //var lastItem = repeater.itemAt(card1)
-        console.log(index) // card1 e index tienen siempre el mismo valor
-        console.log(card1)
-
-        /* if current card is the same as the last card, remove cards from grid */
-        /* if currend card is the same as the last card, face up and count as a match */
-        if(currentItem.imageSource === lastItem.imageSource) {
-//            lastItem.state = "remove"
-//            currentItem.state = "remove"
-            --remaining;
-            console.log("Cards matched! (not removed, play with the statements above)")
-
-            if (remaining === 0) {
-                 console.log('Game Over!')
-                 end_game_timer.start ();
-               }
-           }
-
-        /* if there is no match, turn down again */
-        else if (currentItem.imageSource !== lastItem.imageSource){
-            currentItem.flipped = false     // volver a girar las cartas
-            lastItem.flipped = false
-            //delayTimer.start();
-            console.log("No match!")
-           }
-
-        return card1 = -1
-    }
-
-
 //    Timer {
 //        id: delaytimer
 //        interval: 1000
 //        onTriggered: verify(index)
 //    }
 
-      function reset () {
-          rotation.angle = 0;
-      }
+    function reset () {
+
+        repeater.model = []
+        //repeater.model.flipped = false
+        console.log("function reset parsed!")
+    }
 
     /* use Timer in order to flip all the cards and reset the grid */
     /* not yet implemented */
@@ -167,8 +165,9 @@ MainView {
         interval: 2000
         signal done ()
         onTriggered: {
+            console.log("end_game_timer")
             repeater.itemAt[0] = reset ()
-            //console.log(itemAt[0])
+
             flip_timer0.start ()
         }
     }
@@ -183,5 +182,6 @@ MainView {
             //flip_timer1.start ()
         }
     }
+
 }
 

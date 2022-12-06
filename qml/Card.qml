@@ -75,6 +75,7 @@ Shape {
         }
 
         back: images
+
         transform: Rotation {
             id: rotation
             origin.x: card.width / 2
