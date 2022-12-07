@@ -5,7 +5,7 @@
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; version 3.
  *
- * apptest is distributed in the hope that it will be useful,
+ * memtest is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -20,7 +20,6 @@ import Ubuntu.Components 1.3
 import QtQuick.Layouts 1.3
 import Qt.labs.settings 1.0
 import QtMultimedia 5.12
-import Example 1.0
 
 Shape {
     id: card
@@ -31,6 +30,7 @@ Shape {
     property alias soundFx: soundFx.source
 
     signal finished ()
+//    signal jump()
 
     /* not fully implemented */
     MediaPlayer {

@@ -75,15 +75,6 @@ MainView {
                                   ? repeater.model / imageCount : 1
         property var imageIndexes: Util.generateCardIndexes(imageCount, repeatCount)
 
-        Image {
-            id: bgd1
-//            fillMode: Image.Tile
-            anchors.fill: parent
-            source: "qrc:/assets/bgd1.png"
-            opacity: 0.8
-            z: -1
-        }
-
         Grid {
             id: grid
             x: wrapper.card_xspacing
@@ -101,7 +92,7 @@ MainView {
                 delegate: Card {
                     height: wrapper.card_size
                     width: wrapper.card_size
-                    imageSource: "../assets/card_" + wrapper.imageIndexes[index] + ".svg" 
+                    imageSource: "../assets/card_" + wrapper.imageIndexes[index] + ".svg"
                     onFinished: wrapper.verify(index)
                 }
             }
@@ -123,6 +114,8 @@ MainView {
                 /* if current card is the same as the last card, remove cards from grid */
                 /* if currend card is the same as the last card, face up and count as a match */
                 if(currentItem.imageSource === lastItem.imageSource) {
+        //            lastItem.state = "remove"
+        //            currentItem.state = "remove"
                     --remaining;
                     console.log("Cards matched! (not removed, play with the statements above)")
 
@@ -143,11 +136,9 @@ MainView {
 
                 return card1 = -1
             }
-    }
 
-//    PageStack {
-//        id: pageStack
-//    }
+
+    }
 //    Timer {
 //        id: delaytimer
 //        interval: 1000
@@ -156,20 +147,28 @@ MainView {
 
     function reset () {
 
+        repeater.model = []
+        //repeater.model.flipped = false
+
         console.log("function reset parsed!")
-        //pageStack.push(Qt.resolvedUrl("Main.qml"))
-        pageStack.push(Qt.resolvedUrl("GameView.qml"))
+
+       pageStack.push(Qt.resolvedUrl("GameView.qml"))
+
     }
 
+    PageStack {
+        id: pageStack
+    }
+
+    /* use Timer in order to flip all the cards and reset the grid */
+    /* not yet implemented */
     Timer {
         id: end_game_timer
         interval: 2000
         signal done ()
         onTriggered: {
             console.log("end_game_timer")
-            //repeater.itemAt[0] = reset ()
-            var card0 = repeater.itemAt(0)
-            card0.flipped = false
+            repeater.itemAt[0] = reset ()
 
             flip_timer0.start ()
         }
@@ -180,56 +179,11 @@ MainView {
         interval: 100
         signal done ()
         onTriggered: {
-            var card1 = repeater.itemAt(1)
-            card1.flipped = false
-
-            var card2 = repeater.itemAt(2)
-            card2.flipped = false
-
-//            repeater.itemAt[1] = reset ()
-//            repeater.itemAt[2] = reset ()
-            flip_timer1.start ()
-        }
-    }
-    Timer {
-        id: flip_timer1
-        interval: 100
-        signal done ()
-        onTriggered: {
-            var card3 = repeater.itemAt(3)
-            card3.flipped = false
-
-            var card4 = repeater.itemAt(4)
-            card4.flipped = false
-
-            flip_timer2.start ()
+            repeater.itemAt[1] = reset ()
+            repeater.itemAt[2] = reset ()
+            //flip_timer1.start ()
         }
     }
 
-    Timer {
-        id: flip_timer2
-        interval: 100
-        signal done ()
-        onTriggered: {
-            var card5 = repeater.itemAt(5)
-            card5.flipped = false
-
-            var card6 = repeater.itemAt(6)
-            card6.flipped = false
-
-            var card7 = repeater.itemAt(7)
-            card7.flipped = false
-            resetTimer.start()
-        }
-    }
-
-    Timer {
-        id: resetTimer
-        interval: 800
-        onTriggered: {
-            reset()
-        }
-    }
 }
-
 
