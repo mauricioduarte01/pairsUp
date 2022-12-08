@@ -6,12 +6,17 @@ import Qt.labs.settings 1.0
 import "utils.js" as Util
 import QtMultimedia 5.12
 
+
+
 Page {
+    id: wrapper
+    property variant win;
+
     property int lastIndex : -1
     property int card1: -1
     property int remaining: Math.round(repeater.model / 2)
+
     header: PageHeader { visible: false }
-    id: wrapper
     /* define the number of columns depending on the device xy orientation */
     property int n_columns: height > width ? 2 : 4
     property int n_rows: height > width ? 4 : 2
@@ -93,8 +98,12 @@ Page {
           function reset () {
 
               console.log("function reset parsed!")
-              pageStack.clear(Qt.resolvedUrl("Main.qml"))
+              //repeater.model = []
+
               pageStack.push(Qt.resolvedUrl("Main.qml"))
+//              var component = Qt.createComponent("Main.qml");
+//                      win = component.createObject(wrapper);
+//                      win.show();
 
           }
 
@@ -104,10 +113,10 @@ Page {
               signal done ()
               onTriggered: {
                   console.log("end_game_timer")
-                  //repeater.itemAt[0] = reset ()
+                  //repeater.itemAt[0] = reset () <- IGNORE
                   var card0 = repeater.itemAt(0)
                   card0.flipped = false
-
+                  //  reset()
                   flip_timer0.start ()
               }
           }
@@ -162,7 +171,7 @@ Page {
 
           Timer {
               id: resetTimer
-              interval: 800
+              interval: 2000
               onTriggered: {
                   reset()
               }

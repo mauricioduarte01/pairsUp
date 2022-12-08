@@ -23,16 +23,45 @@ import "utils.js" as Util
 import QtMultimedia 5.12
 import QtQuick.Window 2.3
 
-Page {
-    id: wrapper
+MainView {
+    id: root
+    objectName: 'mainView'
+    applicationName: 'memtest.md'
+    automaticOrientation: true
+
+    width: units.gu(45)
+    height: units.gu(75)
+
     property int lastIndex : -1
     property int card1: -1
     property int remaining: Math.round(repeater.model / 2)
 
     property variant win;
 
-        header: PageHeader { visible: false }
 
+    //        Component.onCompleted: {
+    //            fillData()
+    //        }
+
+    //        function fillData() {
+    //            var assetPath = "../assets/"
+    //            append ({})
+    //            append({"imageSource": assetPath + "card_" + wrapper.imageIndexes[index] + ".svg"})
+    //            append({"imageSource": assetPath + "card_" + wrapper.imageIndexes[index] + ".svg"})
+    //            append({"imageSource": assetPath + "card_" + wrapper.imageIndexes[index] + ".svg"})
+
+    //            append({"imageSource": assetPath + "cow.svg", color: "red" })
+    //            append({"imageSource": assetPath + "dog.svg", color: "blue"})
+    //            append({"imageSource": assetPath + "dog.svg", color: "blue"})
+    //            append({"imageSource": assetPath + "sheep.svg", color: "green"})
+    //            append({"imageSource": assetPath + "sheep.svg", color: "green"})
+    //        }
+    //    }
+
+
+    Page {
+        header: PageHeader { visible: false }
+        id: wrapper
         /* define the number of columns depending on the device xy orientation */
         property int n_columns: height > width ? 2 : 4
         property int n_rows: height > width ? 4 : 2
@@ -49,10 +78,10 @@ Page {
                                   ? repeater.model / imageCount : 1
         property var imageIndexes: Util.generateCardIndexes(imageCount, repeatCount)
 
-//        Loader {
-//            id: loading
-//            source: "GameView.qml"
-//                focus: true
+        Loader {
+            id: loading
+
+                focus: true
 
 //            function reload()
 //                        {
@@ -60,7 +89,7 @@ Page {
 //                            source = "GameView.qml";
 //                            console.debug("Reloaded")
 //                        }
-//                }
+                }
 
         Image {
             id: bgd1
@@ -88,7 +117,7 @@ Page {
                 delegate: Card {
                     height: wrapper.card_size
                     width: wrapper.card_size
-                    imageSource: "../assets/card_" + wrapper.imageIndexes[index] + ".svg"
+                    imageSource: "../assets/card_" + wrapper.imageIndexes[index] + ".svg" 
                     onFinished: wrapper.verify(index)
                 }
             }
@@ -130,9 +159,11 @@ Page {
 
                 return card1 = -1
             }
+    }
 
-
-
+//    PageStack {
+//        id: pageStack
+//    }
 //    Timer {
 //        id: delaytimer
 //        interval: 1000
@@ -142,9 +173,10 @@ Page {
     function reset () {
 
         console.log("function reset parsed!")
+        loading.source = "GameView.qml"
 
 //        pageStack.push(Qt.resolvedUrl("Main.qml"))
-        pageStack.push(Qt.resolvedUrl("GameView.qml"))
+//        pageStack.push(Qt.resolvedUrl("GameView.qml"))
 //        var component = Qt.createComponent("GameView.qml");
 //                win = component.createObject(root);
 //                win.show();
@@ -221,4 +253,5 @@ Page {
         }
     }
 }
+
 
