@@ -64,13 +64,14 @@ Shape {
 
         front: Rectangle {
             anchors.fill: parent
-            color: "grey"
+            color: "brown"
             radius: 5
 
 //            Image {
+
 //                anchors { fill: parent; centerIn: parent }
 //                fillMode: Image.PreserveAspectFit
-//                source: "../assets/cow.svg"
+//                source: "../assets/frontcard1.png"
 //            }
         }
 

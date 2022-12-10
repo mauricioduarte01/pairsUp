@@ -29,12 +29,37 @@ MainView {
     automaticOrientation: true
     //headerColor: "#57365E"
     //backgroundColor: "#A55263"
+    property bool soundMuted: false
+    onSoundMutedChanged: soundMuted ? soundtrack.stop() : soundtrack.play()
+
+    Audio {
+        id: soundtrack
+
+        source: "../assets/FarmSong.ogg"
+
+        autoLoad: true
+//        muted: soundMuted
+//        loops: Audio.Infinite
+        autoPlay: true
+    }
+
+//    Connections {
+//        target: Qt.application
+//        onActiveChanged: {
+//            if (Qt.application.active && !soundMuted) {
+//                soundtrack.play();
+//            } else {
+//                soundtrack.pause();
+//            }
+//        }
+//    }
 
 
     width: units.gu(45)
     height: units.gu(75)
 
     Component.onCompleted:{
+        soundtrack.play();
         pageStack.push(Qt.resolvedUrl("Lvl1.qml"))
     }
 

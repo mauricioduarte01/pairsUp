@@ -23,5 +23,7 @@
         <file>../assets/bgd1.png</file>
         <file>../assets/card3_3.png</file>
         <file>../assets/card3_4.png</file>
+        <file>../assets/frontcard1.png</file>
+        <file>../assets/FarmSong.ogg</file>
     </qresource>
 </RCC>

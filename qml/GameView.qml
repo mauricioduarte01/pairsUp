@@ -100,7 +100,7 @@ Page {
               console.log("function reset parsed!")
               //repeater.model = []
 
-              pageStack.push(Qt.resolvedUrl("Main.qml"))
+              pageStack.push(Qt.resolvedUrl("Lvl1.qml"))
 //              var component = Qt.createComponent("Main.qml");
 //                      win = component.createObject(wrapper);
 //                      win.show();
