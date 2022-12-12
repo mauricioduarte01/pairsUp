@@ -75,7 +75,7 @@ Page {
                 delegate: Card {
                     height: wrapper.card_size
                     width: wrapper.card_size
-                    imageSource: "../assets/card_" + wrapper.imageIndexes[index] + ".svg"
+                    imageSource: "../assets/card4_" + wrapper.imageIndexes[index] + ".png"
                     onFinished: wrapper.verify(index)
                 }
             }
@@ -131,7 +131,7 @@ Page {
         console.log("function reset parsed!")
 
 //        pageStack.push(Qt.resolvedUrl("Main.qml"))
-        pageStack.push(Qt.resolvedUrl("GameView.qml"))
+        pageStack.push(Qt.resolvedUrl("Lvl1.qml"))
 //        var component = Qt.createComponent("GameView.qml");
 //                win = component.createObject(root);
 //                win.show();
@@ -202,6 +202,7 @@ Page {
             card7.flipped = false
             card7.enabled = false
             resetTimer.start()
+
 //            var card8 = repeater.itemAt(8)
 //            card8.flipped = false
 //            card8.enabled = false

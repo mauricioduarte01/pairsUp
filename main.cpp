@@ -19,6 +19,8 @@
 #include <QUrl>
 #include <QString>
 #include <QQuickView>
+#include <QWindow>
+
 
 int main(int argc, char *argv[])
 {
@@ -33,4 +35,6 @@ int main(int argc, char *argv[])
     view->show();
 
     return app->exec();
+
+
 }

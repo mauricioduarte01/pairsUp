@@ -27,10 +27,25 @@ MainView {
     objectName: 'mainView'
     applicationName: 'memtest.md'
     automaticOrientation: true
+    width: units.gu(45)
+    height: units.gu(75)
+
     //headerColor: "#57365E"
     //backgroundColor: "#A55263"
     property bool soundMuted: false
     onSoundMutedChanged: soundMuted ? soundtrack.stop() : soundtrack.play()
+
+    Rectangle {
+    id: bgd
+        anchors.fill: parent
+        z: -1
+        gradient: Gradient {
+            GradientStop { position: 0; color: "#10040C" }
+            GradientStop { position: 0.33; color: "#411031" }
+            GradientStop { position: 0.9; color: "#621849" }
+        }
+    }
+//AnimatedImage { id: animation; anchors.fill: parent; source: "qrc:/assets/bgd1.gif"; z: -1 }
 
     Audio {
         id: soundtrack
@@ -38,25 +53,33 @@ MainView {
         source: "../assets/FarmSong.ogg"
 
         autoLoad: true
-//        muted: soundMuted
-//        loops: Audio.Infinite
-        autoPlay: true
+        muted: soundMuted
+        loops: Audio.Infinite
+//        autoPlay: true
     }
 
-//    Connections {
-//        target: Qt.application
-//        onActiveChanged: {
-//            if (Qt.application.active && !soundMuted) {
-//                soundtrack.play();
-//            } else {
-//                soundtrack.pause();
-//            }
-//        }
+    Connections {
+        target: Qt.application
+
+        onActiveChanged: {
+            if (Qt.application.active && !soundMuted) {
+                soundtrack.play();
+            } else {
+                soundtrack.pause();
+            }
+        }
+        onAboutToQuit: {
+           soundtrack.stop()
+        }
+    }
+
+
+
+//    MediaPlayer {
+//        id: soundtrack
+//        source: "../assets/FarmSong.ogg"
+//        loops: MediaPlayer.Infinite
 //    }
-
-
-    width: units.gu(45)
-    height: units.gu(75)
 
     Component.onCompleted:{
         soundtrack.play();

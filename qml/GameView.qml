@@ -100,7 +100,7 @@ Page {
               console.log("function reset parsed!")
               //repeater.model = []
 
-              pageStack.push(Qt.resolvedUrl("Lvl1.qml"))
+              pageStack.push(Qt.resolvedUrl("Lvl2.qml"))
 //              var component = Qt.createComponent("Main.qml");
 //                      win = component.createObject(wrapper);
 //                      win.show();
@@ -116,6 +116,7 @@ Page {
                   //repeater.itemAt[0] = reset () <- IGNORE
                   var card0 = repeater.itemAt(0)
                   card0.flipped = false
+                  card0.enabled = false
                   //  reset()
                   flip_timer0.start ()
               }
@@ -128,9 +129,10 @@ Page {
               onTriggered: {
                   var card1 = repeater.itemAt(1)
                   card1.flipped = false
-
+                  card1.enabled = false
                   var card2 = repeater.itemAt(2)
                   card2.flipped = false
+                  card2.enabled = false
 
       //            repeater.itemAt[1] = reset ()
       //            repeater.itemAt[2] = reset ()
@@ -144,9 +146,11 @@ Page {
               onTriggered: {
                   var card3 = repeater.itemAt(3)
                   card3.flipped = false
+                  card3.enabled = false
 
                   var card4 = repeater.itemAt(4)
                   card4.flipped = false
+                  card4.enabled = false
 
                   flip_timer2.start ()
               }
@@ -159,19 +163,22 @@ Page {
               onTriggered: {
                   var card5 = repeater.itemAt(5)
                   card5.flipped = false
+                  card5.enabled = false
 
                   var card6 = repeater.itemAt(6)
                   card6.flipped = false
+                  card6.enabled = false
 
                   var card7 = repeater.itemAt(7)
                   card7.flipped = false
+                  card7.enabled = false
                   resetTimer.start()
               }
           }
 
           Timer {
               id: resetTimer
-              interval: 2000
+              interval: 750
               onTriggered: {
                   reset()
               }

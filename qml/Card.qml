@@ -40,7 +40,7 @@ Shape {
     Rectangle {
             id: frontCardCheck
             anchors.fill: parent
-            color: "#99FFFF"
+            color: "#45B129"
             radius: 5
 
         Image {
@@ -64,14 +64,14 @@ Shape {
 
         front: Rectangle {
             anchors.fill: parent
-            color: "brown"
+            color: "#862D37"
             radius: 5
 
 //            Image {
 
 //                anchors { fill: parent; centerIn: parent }
 //                fillMode: Image.PreserveAspectFit
-//                source: "../assets/frontcard1.png"
+//                source: "../assets/frontcard1.png" //back
 //            }
         }
 

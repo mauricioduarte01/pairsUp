@@ -9,7 +9,7 @@
             "desktop":  "memorytest.desktop"
         }
     },
-    "version": "1.0.0",
+    "version": "1.0.3",
     "maintainer": "Mauricio Duarte <mauricioduarte@pm.me>",
     "framework" : "@CLICK_FRAMEWORK@"
 }

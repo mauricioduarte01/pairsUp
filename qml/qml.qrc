@@ -12,18 +12,23 @@
         <file>../assets/cat.ogg</file>
         <file>logic.cpp</file>
         <file>GameView.qml</file>
-        <file>../assets/card2_1.svg</file>
-        <file>../assets/card2_2.svg</file>
-        <file>../assets/card2_3.svg</file>
-        <file>../assets/card2_4.svg</file>
         <file>Lvl1.qml</file>
-        <file>MainPage.qml</file>
         <file>../assets/card3_1.png</file>
         <file>../assets/card3_2.png</file>
         <file>../assets/bgd1.png</file>
         <file>../assets/card3_3.png</file>
         <file>../assets/card3_4.png</file>
-        <file>../assets/frontcard1.png</file>
         <file>../assets/FarmSong.ogg</file>
+        <file>../assets/bgd1.gif</file>
+        <file>../assets/card_5.svg</file>
+        <file>Lvl2.qml</file>
+        <file>../assets/card2_1.png</file>
+        <file>../assets/card2_2.png</file>
+        <file>../assets/card2_3.png</file>
+        <file>../assets/card2_4.png</file>
+        <file>../assets/card4_1.png</file>
+        <file>../assets/card4_2.png</file>
+        <file>../assets/card4_3.png</file>
+        <file>../assets/card4_4.png</file>
     </qresource>
 </RCC>
