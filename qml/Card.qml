@@ -40,7 +40,9 @@ Shape {
     Rectangle {
             id: frontCardCheck
             anchors.fill: parent
+            border.color: "black"
             color: "#45B129"
+            border.width: 5
             radius: 5
 
         Image {
@@ -64,6 +66,7 @@ Shape {
 
         front: Rectangle {
             anchors.fill: parent
+            border.color: "black"
             color: "#862D37"
             radius: 5
 

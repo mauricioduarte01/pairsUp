@@ -75,7 +75,7 @@ Page {
                 delegate: Card {
                     height: wrapper.card_size
                     width: wrapper.card_size
-                    imageSource: "../assets/card4_" + wrapper.imageIndexes[index] + ".png"
+                    imageSource: "../assets/card2_" + wrapper.imageIndexes[index] + ".svg"
                     onFinished: wrapper.verify(index)
                 }
             }
@@ -131,7 +131,7 @@ Page {
         console.log("function reset parsed!")
 
 //        pageStack.push(Qt.resolvedUrl("Main.qml"))
-        pageStack.push(Qt.resolvedUrl("Lvl1.qml"))
+        pageStack.push(Qt.resolvedUrl("Lvl3.qml"))
 //        var component = Qt.createComponent("GameView.qml");
 //                win = component.createObject(root);
 //                win.show();
