@@ -8,18 +8,11 @@ Current goal is to finish implementing the game logic. Once that's sorted out, t
 
 ~~-Shuffle/reset game when all cards are discovered.~~ **DONE.**
 
--FIXME: add a delay when flipping the cards to prevent the animation for getting stuck
+~~-FIXME: add a delay when flipping the cards to prevent the animation for getting stuck. ~~ **DONE.**
 
--Add timer
+-Add music (in progress)
 
--Add scoreboard
-
--Add difficulty selection
-
--A name for the game still not decided yet
-
--If you have any good ideas you are more than welcome to share it here ;)
-
+-Add main menu
 ## Assets
 
 Placeholder of animals art used for the cards are taken from [Animal Farm app by Robert Ancell](https://launchpad.net/animal-farm).
