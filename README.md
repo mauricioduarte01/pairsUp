@@ -6,9 +6,9 @@ Current goal is to finish implementing the game logic. Once that's sorted out, t
 
 ## Pending 
 
-~~-Shuffle/reset game when all cards are discovered. **DONE.**
+~~-Shuffle/reset game when all cards are discovered.~~ **DONE.**
 
--FIXME: add a delay when flipping the cards to prevent the animation for getting stuck.~~ **DONE.**
+~~-FIXME: add a delay when flipping the cards to prevent the animation for getting stuck.~~ **DONE.**
 
 -Add music (in progress)
 
