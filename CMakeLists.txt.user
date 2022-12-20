@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.12.4, 2022-12-17T12:55:38. -->
+<!-- Written by QtCreator 4.12.4, 2022-12-20T13:18:05. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -86,11 +86,11 @@
      <value type="QString">QT_QMAKE_EXECUTABLE:STRING=%{Qt:qmakeExecutable}</value>
     </valuelist>
     <value type="int" key="EnableQmlDebugging">2</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/bladerunner/qmlpractice/pairsup/pairs-up/build/x86_64-linux-gnu/app</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
-      <value type="QString" key="ProjectExplorer.ProcessStep.Arguments">/home/bladerunner/qmlpractice/github/memorytest  -DCMAKE_INSTALL_PREFIX:PATH=/.</value>
+      <value type="QString" key="ProjectExplorer.ProcessStep.Arguments">/home/bladerunner/qmlpractice/pairsup/pairs-up  -DCMAKE_INSTALL_PREFIX:PATH=/.</value>
       <value type="QString" key="ProjectExplorer.ProcessStep.Command">/usr/bin/cmake</value>
       <value type="QString" key="ProjectExplorer.ProcessStep.WorkingDirectory">%{buildDir}</value>
       <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.ProcessStep</value>
@@ -129,7 +129,7 @@
      <value type="QString">QT_QMAKE_EXECUTABLE:STRING=%{Qt:qmakeExecutable}</value>
     </valuelist>
     <value type="int" key="EnableQmlDebugging">2</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/bladerunner/qmlpractice/pairsup/pairs-up/build/x86_64-linux-gnu/app-Debug</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="QString" key="CMakeProjectManager.MakeStep.AdditionalArguments"></value>
@@ -168,7 +168,7 @@
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.DeployConfiguration.0">
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
-      <value type="QString" key="CMakeProjectManager.MakeStep.AdditionalArguments">DESTDIR=/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app/install</value>
+      <value type="QString" key="CMakeProjectManager.MakeStep.AdditionalArguments">DESTDIR=/home/bladerunner/qmlpractice/pairsup/pairs-up/build/x86_64-linux-gnu/app/install</value>
       <valuelist type="QVariantList" key="CMakeProjectManager.MakeStep.BuildTargets">
        <value type="QString">install</value>
       </valuelist>
@@ -248,13 +248,13 @@
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes">
-     <value type="QString">LD_LIBRARY_PATH=/home/bladerunner/qmlpractice/github/memorytest/lib/x86_64-linux-gnu:/home/bladerunner/qmlpractice/github/memorytest/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app/install/lib/x86_64-linux-gnu</value>
-     <value type="QString">QML2_IMPORT_PATH=/home/bladerunner/qmlpractice/github/memorytest/lib/x86_64-linux-gnu:/home/bladerunner/qmlpractice/github/memorytest/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app/install/lib/x86_64-linux-gnu:/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app/install/lib</value>
-     <value type="QString">PATH=/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app/install/lib/x86_64-linux-gnu/bin:/home/bladerunner/qmlpractice/github/memorytest:/usr/local/nvidia/bin:/bin:/usr/bin:/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app/install/lib/x86_64-linux-gnu/bin</value>
+     <value type="QString">LD_LIBRARY_PATH=/home/bladerunner/qmlpractice/pairsup/pairs-up/lib/x86_64-linux-gnu:/home/bladerunner/qmlpractice/pairsup/pairs-up/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/home/bladerunner/qmlpractice/pairsup/pairs-up/build/x86_64-linux-gnu/app/install/lib/x86_64-linux-gnu</value>
+     <value type="QString">QML2_IMPORT_PATH=/home/bladerunner/qmlpractice/pairsup/pairs-up/lib/x86_64-linux-gnu:/home/bladerunner/qmlpractice/pairsup/pairs-up/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/home/bladerunner/qmlpractice/pairsup/pairs-up/build/x86_64-linux-gnu/app/install/lib/x86_64-linux-gnu:/home/bladerunner/qmlpractice/pairsup/pairs-up/build/x86_64-linux-gnu/app/install/lib</value>
+     <value type="QString">PATH=/home/bladerunner/qmlpractice/pairsup/pairs-up/build/x86_64-linux-gnu/app/install/lib/x86_64-linux-gnu/bin:/home/bladerunner/qmlpractice/pairsup/pairs-up:/usr/local/nvidia/bin:/bin:/usr/bin:/home/bladerunner/qmlpractice/pairsup/pairs-up/build/x86_64-linux-gnu/app/install/lib/x86_64-linux-gnu/bin</value>
      <value type="QString">QT_QPA_PLATFORMTHEME=ubuntuappmenu</value>
     </valuelist>
-    <value type="QString" key="ProjectExplorer.CustomExecutableRunConfiguration.Executable">/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app/memorytest</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Run memorytest</value>
+    <value type="QString" key="ProjectExplorer.CustomExecutableRunConfiguration.Executable">pairs-up</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Run pairs-up</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.CustomExecutableRunConfiguration</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey"></value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
@@ -265,7 +265,7 @@
     <value type="bool" key="RunConfiguration.UseMultiProcess">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory">/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app/install</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory">/home/bladerunner/qmlpractice/pairsup/pairs-up/build/x86_64-linux-gnu/app/install</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory.default"></value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.1">
@@ -328,14 +328,14 @@
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">1</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes">
-     <value type="QString">LD_LIBRARY_PATH=/home/bladerunner/qmlpractice/github/memorytest/lib/x86_64-linux-gnu:/home/bladerunner/qmlpractice/github/memorytest/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app/install/lib/x86_64-linux-gnu</value>
-     <value type="QString">QML2_IMPORT_PATH=/home/bladerunner/qmlpractice/github/memorytest/lib/x86_64-linux-gnu:/home/bladerunner/qmlpractice/github/memorytest/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app/install/lib/x86_64-linux-gnu:/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app/install/lib</value>
-     <value type="QString">PATH=/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app/install/lib/x86_64-linux-gnu/bin:/home/bladerunner/qmlpractice/github/memorytest:/usr/local/nvidia/bin:/bin:/usr/bin:/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app/install/lib/x86_64-linux-gnu/bin</value>
+     <value type="QString">LD_LIBRARY_PATH=/home/bladerunner/qmlpractice/pairsup/pairs-up/lib/x86_64-linux-gnu:/home/bladerunner/qmlpractice/pairsup/pairs-up/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/home/bladerunner/qmlpractice/pairsup/pairs-up/build/x86_64-linux-gnu/app/install/lib/x86_64-linux-gnu</value>
+     <value type="QString">QML2_IMPORT_PATH=/home/bladerunner/qmlpractice/pairsup/pairs-up/lib/x86_64-linux-gnu:/home/bladerunner/qmlpractice/pairsup/pairs-up/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/home/bladerunner/qmlpractice/pairsup/pairs-up/build/x86_64-linux-gnu/app/install/lib/x86_64-linux-gnu:/home/bladerunner/qmlpractice/pairsup/pairs-up/build/x86_64-linux-gnu/app/install/lib</value>
+     <value type="QString">PATH=/home/bladerunner/qmlpractice/pairsup/pairs-up/build/x86_64-linux-gnu/app/install/lib/x86_64-linux-gnu/bin:/home/bladerunner/qmlpractice/pairsup/pairs-up:/usr/local/nvidia/bin:/bin:/usr/bin:/home/bladerunner/qmlpractice/pairsup/pairs-up/build/x86_64-linux-gnu/app/install/lib/x86_64-linux-gnu/bin</value>
      <value type="QString">QT_QPA_PLATFORMTHEME=ubuntuappmenu</value>
     </valuelist>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Run memorytest2</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeRunConfiguration.memorytest</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">memorytest</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Run pairs-up2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">CMakeProjectManager.CMakeRunConfiguration.pairs-up</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">pairs-up</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>
@@ -345,8 +345,8 @@
     <value type="bool" key="RunConfiguration.UseMultiProcess">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory">/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app/install</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/bladerunner/qmlpractice/github/memorytest/build/x86_64-linux-gnu/app</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory">/home/bladerunner/qmlpractice/pairsup/pairs-up/build/x86_64-linux-gnu/app/install</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default"></value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">2</value>
   </valuemap>

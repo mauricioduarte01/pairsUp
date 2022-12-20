@@ -1,15 +1,15 @@
 {
-    "name": "memorytest.mduart",
-    "description": "A simple memory card game.",
+    "name": "pairs-up.skyblue",
+    "description": "A simple matching card game for kids.",
     "architecture": "@CLICK_ARCH@",
-    "title": "MemoryTest",
+    "title": "PairsUp",
     "hooks": {
-        "memorytest": {
-            "apparmor": "memorytest.apparmor",
-            "desktop":  "memorytest.desktop"
+        "pairs-up": {
+            "apparmor": "pairs-up.apparmor",
+            "desktop":  "pairs-up.desktop"
         }
     },
-    "version": "1.0.3",
-    "maintainer": "Mauricio Duarte <mauricioduarte@pm.me>",
+    "version": "1.0.0",
+    "maintainer": "M.Duarte <mauricioduarte@pm.me>",
     "framework" : "@CLICK_FRAMEWORK@"
 }

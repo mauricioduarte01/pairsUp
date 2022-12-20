@@ -27,23 +27,21 @@ Shape {
     property alias state: flipable.state
     property alias frontCard: frontCardCheck.color
     property alias imageSource: images.source
-    property alias soundFx: soundFx.source
 
     signal finished ()
-//    signal jump()
 
-    /* not fully implemented */
+    /* not yet implemented
     MediaPlayer {
         id: soundFx
     }
-
+    */
     Rectangle {
-            id: frontCardCheck
-            anchors.fill: parent
-            border.color: "black"
-            color: "#45B129"
-            border.width: 5
-            radius: 5
+        id: frontCardCheck
+        anchors.fill: parent
+        border.color: "black"
+        color: "#DF6589"
+        border.width: 2
+        radius: 5
 
         Image {
             id: images
@@ -66,16 +64,17 @@ Shape {
 
         front: Rectangle {
             anchors.fill: parent
-            border.color: "black"
+            //border.color: "black"
             color: "#862D37"
-            radius: 5
+            radius: 4
 
-//            Image {
-
-//                anchors { fill: parent; centerIn: parent }
-//                fillMode: Image.PreserveAspectFit
-//                source: "../assets/frontcard1.png" //back
-//            }
+            Image {
+                width: 80
+                height: 80
+                anchors { fill: parent; centerIn: parent }
+                fillMode: Image.PreserveAspectFit
+                source: "../assets/star.svg" //back
+            }
         }
 
         back: images
@@ -94,14 +93,13 @@ Shape {
                 }
             }
         }
-
-        /* defined as an array */
         states: [
             State {
                 name: "back"
                 PropertyChanges { target: rotation; angle: 180 }
                 when: flipable.flipped
             },
+            /* not used *yet */
             State {
                 name: "remove"
                 PropertyChanges {
@@ -109,6 +107,7 @@ Shape {
                     visible: false;
                 }
             }
+
         ]
         transitions: Transition {
             NumberAnimation { target: rotation; property: "angle"; duration: 500 }
@@ -121,11 +120,6 @@ Shape {
         MouseArea {
             anchors.fill: parent
             onClicked:  card.flipped = true
-
-//            onClicked: {
-//                flipable.flipped = !flipable.flipped
-//                soundFx.play();
-//            }
         }
     }
 }

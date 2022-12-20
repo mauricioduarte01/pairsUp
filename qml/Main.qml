@@ -16,9 +16,6 @@
 
 import QtQuick 2.7
 import Ubuntu.Components 1.3
-//import QtQuick.Controls 2.2
-import QtQuick.Layouts 1.3
-import Qt.labs.settings 1.0
 import "utils.js" as Util
 import QtMultimedia 5.12
 
@@ -36,26 +33,29 @@ MainView {
     onSoundMutedChanged: soundMuted ? soundtrack.stop() : soundtrack.play()
 
     Rectangle {
-    id: bgd
+        id: bgd
         anchors.fill: parent
         z: -1
         gradient: Gradient {
-            GradientStop { position: 0; color: "#10040C" }
-            GradientStop { position: 0.33; color: "#411031" }
-            GradientStop { position: 0.9; color: "#621849" }
+            //GradientStop { position: 0; color: "#1B0E17" }
+            GradientStop { position: 0.0; color: "#49253E" }
+            //GradientStop { position: 0.20; color: "#652B2A" }
+            //GradientStop { position: 0.36; color: "#7B3433" }
+            GradientStop { position: 0.9; color: "#9E4442" }
         }
     }
-//AnimatedImage { id: animation; anchors.fill: parent; source: "qrc:/assets/bgd1.gif"; z: -1 }
+    //AnimatedImage { id: animation; anchors.fill: parent; source: "qrc:/assets/bgd1.gif"; z: -1 }
 
+     //Implement music once it's completed. WIP
     Audio {
         id: soundtrack
 
-        source: "../assets/FarmSong.ogg"
+        source: "../assets/soundtrack.ogg"
 
         autoLoad: true
         muted: soundMuted
         loops: Audio.Infinite
-//        autoPlay: true
+        //        autoPlay: true
     }
 
     Connections {
@@ -69,25 +69,17 @@ MainView {
             }
         }
         onAboutToQuit: {
-           soundtrack.stop()
+            soundtrack.stop()
         }
     }
 
-
-
-//    MediaPlayer {
-//        id: soundtrack
-//        source: "../assets/FarmSong.ogg"
-//        loops: MediaPlayer.Infinite
-//    }
-
     Component.onCompleted:{
-        soundtrack.play();
-        pageStack.push(Qt.resolvedUrl("Lvl1.qml"))
+//        soundtrack.play();
+        pageStack.push(Qt.resolvedUrl("L1.qml"))
     }
 
-PageStack {
-    id: pageStack
+    PageStack {
+        id: pageStack
     }
 }
 
