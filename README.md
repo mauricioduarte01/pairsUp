@@ -6,16 +6,16 @@ Current goal is to finish implementing the game logic. Once that's sorted out, t
 
 ## Pending 
 
-~~-Shuffle/reset game when all cards are discovered.~~ **DONE.**
+~~-Shuffle/reset game when all cards are discovered. **DONE.**
 
-~~-FIXME: add a delay when flipping the cards to prevent the animation for getting stuck. ~~ **DONE.**
+-FIXME: add a delay when flipping the cards to prevent the animation for getting stuck.~~ **DONE.**
 
 -Add music (in progress)
 
 -Add main menu
 ## Assets
 
-Placeholder of animals art used for the cards are taken from [Animal Farm app by Robert Ancell](https://launchpad.net/animal-farm).
+In-house :)
 
 ## License
 
