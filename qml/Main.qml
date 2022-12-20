@@ -18,6 +18,7 @@ import QtQuick 2.7
 import Ubuntu.Components 1.3
 import "utils.js" as Util
 import QtMultimedia 5.12
+import QtQuick.Layouts 1.3
 
 MainView {
     id: mainView
@@ -46,7 +47,7 @@ MainView {
     }
     //AnimatedImage { id: animation; anchors.fill: parent; source: "qrc:/assets/bgd1.gif"; z: -1 }
 
-     //Implement music once it's completed. WIP
+    //Implement music once it's completed. WIP
     Audio {
         id: soundtrack
 
@@ -74,12 +75,50 @@ MainView {
     }
 
     Component.onCompleted:{
-//        soundtrack.play();
+        //        soundtrack.play();
         pageStack.push(Qt.resolvedUrl("L1.qml"))
     }
 
     PageStack {
         id: pageStack
     }
+
+    BottomEdge {
+        id: bottomEdge
+        height: parent.height - units.gu(70)
+        hint.text: "Sample collapse"
+        contentComponent: Rectangle {
+            width: bottomEdge.width
+            height: bottomEdge.height
+            color: "#301938"
+
+            Icon {
+                id: on
+                width: units.gu(5)
+                height: units.gu(5)
+                name: soundMuted ? 'audio-speakers-muted-symbolic' : "audio-speakers-symbolic"
+
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: soundMuted = !soundMuted
+                }
+            }
+
+            Icon {
+                id: collapse
+                width: units.gu(4)
+                height: units.gu(5)
+                name: "down"
+                anchors.right: parent.right
+
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: bottomEdge.collapse()
+                }
+            }
+        }
+    }
 }
+
+
 

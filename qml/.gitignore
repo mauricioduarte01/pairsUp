@@ -3,7 +3,6 @@ jslogic.qml
 logic.cpp
 utils.cpp
 Main.bak
-Main2.qml
 MainPage.qml
-MainBAK.qml
-Mai3n.qml
+GameSettings.qml
+
