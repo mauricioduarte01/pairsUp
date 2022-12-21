@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(memorytest C CXX)
+project(pairs-up C CXX)
 
 # Automatically create moc files
 set(CMAKE_AUTOMOC ON)
@@ -16,8 +16,8 @@ execute_process(
 )
 set(QT_IMPORTS_DIR "lib/${ARCH_TRIPLET}")
 
-set(PROJECT_NAME "memorytest")
-set(FULL_PROJECT_NAME "memorytest.mduart")
+set(PROJECT_NAME "pairs-up")
+set(FULL_PROJECT_NAME "pairs-up.skyblue")
 set(DATA_DIR /)
 set(DESKTOP_FILE_NAME ${PROJECT_NAME}.desktop)
 

@@ -1,6 +1,6 @@
 [Desktop Entry]
-_Name=MemoryTest
-Exec=memorytest %U
+_Name=pairsUp
+Exec=pairs-up %U
 Icon=assets/logo.svg
 Terminal=false
 Type=Application

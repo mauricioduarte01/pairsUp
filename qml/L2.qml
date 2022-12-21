@@ -1,17 +1,10 @@
 import QtQuick 2.7
 import Ubuntu.Components 1.3
-//import QtQuick.Controls 2.2
-import QtQuick.Layouts 1.3
-import Qt.labs.settings 1.0
 import "utils.js" as Util
 import QtMultimedia 5.12
 
-
-
 Page {
     id: wrapper
-    property variant win;
-
     property int lastIndex : -1
     property int card1: -1
     property int remaining: Math.round(repeater.model / 2)
@@ -39,7 +32,6 @@ Page {
         y: wrapper.card_yspacing
         columns: wrapper.n_columns
         rows: wrapper.n_rows
-
         columnSpacing: wrapper.card_xspacing
         rowSpacing: wrapper.card_yspacing
 
@@ -55,135 +47,104 @@ Page {
             }
         }
     }
-          function verify(index) {
-            var currentItem = repeater.itemAt(index);
-            var lastItem = repeater.itemAt(card1)
-            while(card1 < 0) {
-                card1 = index
-                return
-            }
-
-
-            //var currentItem = repeater.itemAt(index)
-            //var lastItem = repeater.itemAt(card1)
-            console.log(index) // card1 e index tienen siempre el mismo valor
-            console.log(card1)
-
-            /* if current card is the same as the last card, remove cards from grid */
-            /* if currend card is the same as the last card, face up and count as a match */
-            if(currentItem.imageSource === lastItem.imageSource) {
-    //            lastItem.state = "remove"
-    //            currentItem.state = "remove"
-                --remaining;
-                console.log("Cards matched! (not removed, play with the statements above)")
-
-                if (remaining === 0) {
-                     console.log('Game Over!')
-                     end_game_timer.start ();
-
-                }
-               }
-
-            /* if there is no match, turn down again */
-            else if (currentItem.imageSource !== lastItem.imageSource){
-                currentItem.flipped = false     // volver a girar las cartas
-                lastItem.flipped = false
-                //delayTimer.start();
-                console.log("No match!")
-               }
-
-            return card1 = -1
+    function verify(index) {
+        var currentItem = repeater.itemAt(index);
+        var lastItem = repeater.itemAt(card1)
+        while(card1 < 0) {
+            card1 = index
+            return
         }
 
-          function reset () {
+        /* if current card is the same as the last card, remove cards from grid */
+        /* if currend card is the same as the last card, face up and count as a match */
+        if(currentItem.imageSource === lastItem.imageSource) {
+            --remaining;
+            if (remaining === 0) {
+                end_game_timer.start ();
+            }
+        }
 
-              console.log("function reset parsed!")
-              //repeater.model = []
+        /* if there is no match, turn down again */
+        else if (currentItem.imageSource !== lastItem.imageSource){
+            currentItem.flipped = false     // flip cards again
+            lastItem.flipped = false
+        }
+        return card1 = -1
+    }
 
-              pageStack.push(Qt.resolvedUrl("L3.qml"))
-//              var component = Qt.createComponent("Main.qml");
-//                      win = component.createObject(wrapper);
-//                      win.show();
+    function reset () {
+        pageStack.push(Qt.resolvedUrl("L3.qml"))
+    }
 
-          }
+    Timer {
+        id: end_game_timer
+        interval: 2000
+        signal done ()
+        onTriggered: {
+            //repeater.itemAt[0] = reset () <- IGNORE
+            var card0 = repeater.itemAt(0)
+            card0.flipped = false
+            card0.enabled = false
+            flip_timer0.start ()
+        }
+    }
+    Timer {
+        id: flip_timer0
+        interval: 100
+        signal done ()
+        onTriggered: {
+            var card1 = repeater.itemAt(1)
+            card1.flipped = false
+            card1.enabled = false
 
-          Timer {
-              id: end_game_timer
-              interval: 2000
-              signal done ()
-              onTriggered: {
-                  console.log("end_game_timer")
-                  //repeater.itemAt[0] = reset () <- IGNORE
-                  var card0 = repeater.itemAt(0)
-                  card0.flipped = false
-                  card0.enabled = false
-                  //  reset()
-                  flip_timer0.start ()
-              }
-          }
+            var card2 = repeater.itemAt(2)
+            card2.flipped = false
+            card2.enabled = false
+            flip_timer1.start ()
+        }
+    }
+    Timer {
+        id: flip_timer1
+        interval: 100
+        signal done ()
+        onTriggered: {
+            var card3 = repeater.itemAt(3)
+            card3.flipped = false
+            card3.enabled = false
 
-          Timer {
-              id: flip_timer0
-              interval: 100
-              signal done ()
-              onTriggered: {
-                  var card1 = repeater.itemAt(1)
-                  card1.flipped = false
-                  card1.enabled = false
-                  var card2 = repeater.itemAt(2)
-                  card2.flipped = false
-                  card2.enabled = false
+            var card4 = repeater.itemAt(4)
+            card4.flipped = false
+            card4.enabled = false
 
-      //            repeater.itemAt[1] = reset ()
-      //            repeater.itemAt[2] = reset ()
-                  flip_timer1.start ()
-              }
-          }
-          Timer {
-              id: flip_timer1
-              interval: 100
-              signal done ()
-              onTriggered: {
-                  var card3 = repeater.itemAt(3)
-                  card3.flipped = false
-                  card3.enabled = false
+            flip_timer2.start ()
+        }
+    }
+    Timer {
+        id: flip_timer2
+        interval: 100
+        signal done ()
+        onTriggered: {
+            var card5 = repeater.itemAt(5)
+            card5.flipped = false
+            card5.enabled = false
 
-                  var card4 = repeater.itemAt(4)
-                  card4.flipped = false
-                  card4.enabled = false
+            var card6 = repeater.itemAt(6)
+            card6.flipped = false
+            card6.enabled = false
 
-                  flip_timer2.start ()
-              }
-          }
-
-          Timer {
-              id: flip_timer2
-              interval: 100
-              signal done ()
-              onTriggered: {
-                  var card5 = repeater.itemAt(5)
-                  card5.flipped = false
-                  card5.enabled = false
-
-                  var card6 = repeater.itemAt(6)
-                  card6.flipped = false
-                  card6.enabled = false
-
-                  var card7 = repeater.itemAt(7)
-                  card7.flipped = false
-                  card7.enabled = false
-                  resetTimer.start()
-              }
-          }
-
-          Timer {
-              id: resetTimer
-              interval: 750
-              onTriggered: {
-                  reset()
-              }
-          }
-
+            var card7 = repeater.itemAt(7)
+            card7.flipped = false
+            card7.enabled = false
+            resetTimer.start()
+        }
+    }
+    Timer {
+        id: resetTimer
+        interval: 750
+        onTriggered: {
+            reset()
+        }
+    }
 }
 
 
