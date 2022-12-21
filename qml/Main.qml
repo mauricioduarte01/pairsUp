@@ -5,7 +5,7 @@
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; version 3.
  *
- * memtest is distributed in the hope that it will be useful,
+ * pairs-up is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.3
 MainView {
     id: mainView
     objectName: 'mainView'
-    applicationName: 'memtest.md'
+    applicationName: 'pairs-up.md'
     automaticOrientation: true
     width: units.gu(45)
     height: units.gu(75)
@@ -50,13 +50,10 @@ MainView {
     //Implement music once it's completed. WIP
     Audio {
         id: soundtrack
-
         source: "../assets/soundtrack.ogg"
-
         autoLoad: true
         muted: soundMuted
         loops: Audio.Infinite
-        //        autoPlay: true
     }
 
     Connections {
@@ -75,7 +72,6 @@ MainView {
     }
 
     Component.onCompleted:{
-        //        soundtrack.play();
         pageStack.push(Qt.resolvedUrl("L1.qml"))
     }
 
@@ -85,8 +81,7 @@ MainView {
 
     BottomEdge {
         id: bottomEdge
-        height: parent.height - units.gu(70)
-        hint.text: "Sample collapse"
+        height: units.gu(10)
         contentComponent: Rectangle {
             width: bottomEdge.width
             height: bottomEdge.height
@@ -97,7 +92,11 @@ MainView {
                 width: units.gu(5)
                 height: units.gu(5)
                 name: soundMuted ? 'audio-speakers-muted-symbolic' : "audio-speakers-symbolic"
-
+                anchors {
+                    margins: 30
+                    top: parent.top
+                    bottom: parent.bottom
+                }
                 MouseArea {
                     anchors.fill: parent
                     onClicked: soundMuted = !soundMuted
@@ -109,7 +108,12 @@ MainView {
                 width: units.gu(4)
                 height: units.gu(5)
                 name: "down"
-                anchors.right: parent.right
+                anchors {
+                    margins: 30
+                    top: parent.top
+                    bottom: parent.bottom
+                    right: parent.right
+                }
 
                 MouseArea {
                     anchors.fill: parent
