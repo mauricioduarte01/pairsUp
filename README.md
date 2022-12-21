@@ -1,4 +1,4 @@
-# MemoryTest
+# pairsUp
 
 A simple matching cards game for UT intended for learning purposes.  
 
