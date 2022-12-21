@@ -29,6 +29,5 @@
         <file>../assets/logo.svg</file>
         <file>../assets/star.svg</file>
         <file>../assets/soundtrack.ogg</file>
-        <file>GameSettings.qml</file>
     </qresource>
 </RCC>

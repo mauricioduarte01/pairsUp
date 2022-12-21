@@ -11,10 +11,8 @@ Current goal is to finish implementing the game logic. Once that's sorted out, t
 ~~-FIXME: add a delay when flipping the cards to prevent the animation for getting stuck.~~ **DONE.**
 
 -Add music (in progress)
--Add main menu
--Add timer
--Add score
 
+-Add main menu
 ## Assets
 
 In-house :)
