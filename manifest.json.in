@@ -2,7 +2,7 @@
     "name": "pairs-up.skyblue",
     "description": "A simple matching card game for kids.",
     "architecture": "@CLICK_ARCH@",
-    "title": "PairsUp",
+    "title": "pairsUp",
     "hooks": {
         "pairs-up": {
             "apparmor": "pairs-up.apparmor",

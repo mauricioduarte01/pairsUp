@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.12.4, 2022-12-21T01:20:44. -->
+<!-- Written by QtCreator 4.12.4, 2022-12-21T12:49:14. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -346,7 +346,7 @@
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory">/home/bladerunner/qmlpractice/pairsup/pairs-up/build/x86_64-linux-gnu/app/install</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default"></value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/bladerunner/qmlpractice/pairsup/pairs-up/build/x86_64-linux-gnu/app</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">2</value>
   </valuemap>

@@ -1,5 +1,5 @@
 [Desktop Entry]
-_Name=PairsUp
+_Name=pairsUp
 Exec=pairs-up %U
 Icon=assets/logo.svg
 Terminal=false

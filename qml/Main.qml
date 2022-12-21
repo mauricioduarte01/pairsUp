@@ -31,7 +31,7 @@ MainView {
     //headerColor: "#57365E"
     //backgroundColor: "#A55263"
     property bool soundMuted: false
-    onSoundMutedChanged: soundMuted ? soundtrack.stop() : soundtrack.play()
+    onSoundMutedChanged: soundMuted ? music.stop() : music.play()
 
     Rectangle {
         id: bgd
@@ -49,7 +49,7 @@ MainView {
 
     //Implement music once it's completed. WIP
     Audio {
-        id: soundtrack
+        id: music
         source: "../assets/soundtrack.ogg"
         autoLoad: true
         muted: soundMuted
@@ -61,13 +61,13 @@ MainView {
 
         onActiveChanged: {
             if (Qt.application.active && !soundMuted) {
-                soundtrack.play();
+                music.play();
             } else {
-                soundtrack.pause();
+                music.pause();
             }
         }
         onAboutToQuit: {
-            soundtrack.stop()
+            music.stop()
         }
     }
 
@@ -93,9 +93,10 @@ MainView {
                 height: units.gu(5)
                 name: soundMuted ? 'audio-speakers-muted-symbolic' : "audio-speakers-symbolic"
                 anchors {
-                    margins: 30
+                    margins: 50
                     top: parent.top
                     bottom: parent.bottom
+                    left: parent.left
                 }
                 MouseArea {
                     anchors.fill: parent
@@ -109,7 +110,7 @@ MainView {
                 height: units.gu(5)
                 name: "down"
                 anchors {
-                    margins: 30
+                    margins: 50
                     top: parent.top
                     bottom: parent.bottom
                     right: parent.right
