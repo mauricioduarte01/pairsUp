@@ -20,13 +20,14 @@ set(PROJECT_NAME "pairs-up")
 set(FULL_PROJECT_NAME "pairs-up.skyblue")
 set(DATA_DIR /)
 set(DESKTOP_FILE_NAME ${PROJECT_NAME}.desktop)
+set(CMAKE_BUILD_TYPE Release)
 
 # This command figures out the minimum SDK framework for use in the manifest
 # file via the environment variable provided by Clickable or sets a default value otherwise.
 if(DEFINED ENV{SDK_FRAMEWORK})
     set(CLICK_FRAMEWORK "$ENV{SDK_FRAMEWORK}")
 else()
-    set(CLICK_FRAMEWORK "ubuntu-sdk-16.04.3")
+    set(CLICK_FRAMEWORK "ubuntu-sdk-20.04")
 endif()
 
 # This figures out the target architecture for use in the manifest file.

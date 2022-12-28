@@ -9,7 +9,7 @@
             "desktop":  "pairs-up.desktop"
         }
     },
-    "version": "1.2.0",
+    "version": "1.3.0",
     "maintainer": "M.Duarte <mauricioduarte@pm.me>",
-    "framework" : "@CLICK_FRAMEWORK@"
+    "framework" : "ubuntu-sdk-20.04"
 }

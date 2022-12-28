@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.7
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 //import QtQuick.Controls 2.2
 import "utils.js" as Util
 import QtMultimedia 5.12

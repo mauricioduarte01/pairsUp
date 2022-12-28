@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.7
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import "utils.js" as Util
 import QtMultimedia 5.12
 
@@ -122,6 +122,7 @@ Page {
             flip_timer0.start ()
         }
     }
+
     Timer {
         id: flip_timer0
         interval: 100
