@@ -1,5 +1,6 @@
 # pairsUp
 
+<img src="images/showcase.jpg" width="300"><img src="https://open-store.io/badges/en_US.svg" width="300"> 
 A simple matching cards game for UT intended for learning purposes.  
 
 Current goal is to finish implementing the game logic. Once that's sorted out, the idea is to continue adding stuff such as music, sound fx, custom themes and more. Anyway the idea is to keep it simple... and family friendly. Feel free to contribute to the code :)
@@ -16,6 +17,10 @@ Current goal is to finish implementing the game logic. Once that's sorted out, t
 ## Assets
 
 In-house :)
+
+## Assets
+
+Special thanks to Kugi Eusebio for all the support, likewise to Milan Korecky for the testing.
 
 ## License
 
