@@ -14,7 +14,7 @@ Special thanks to Kugi Eusebio for all the support, likewise to Milan Korecky fo
 
 ~~-FIXME: add a delay when flipping the cards to prevent the animation for getting stuck.~~ **DONE.**
 
-~~-Add music (in progress)~~
+~~-Add music (in progress)~~ **DONE**
 
 -Add main menu
 ## Assets
@@ -23,7 +23,7 @@ In-house :)
 
 ## Available on: 
 
-<img src="https://open-store.io/badges/en_US.svg" width=60% height=60%> 
+<a href=https://open-store.io/app/pairs-up.skyblue><img src="https://open-store.io/badges/en_US.svg" width=60% height=60%></a>
 
 ## License
 
