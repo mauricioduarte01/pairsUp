@@ -9,7 +9,7 @@ Current goal is to finish implementing the game logic. Once that's sorted out, t
 Special thanks to Kugi Eusebio for all the support, likewise to Milan Korecky for the testing.
 
 ## Pending 
-~~-Add difficulty selector.~~
+-Add difficulty selector.
 
 ~~-Shuffle/reset game when all cards are discovered.~~ **DONE.**
 
